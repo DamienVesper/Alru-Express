@@ -4,6 +4,14 @@ const config = require(`./config.js`);
 const express = require(`express`);
 const app = express();
 
+let indexRouter = require(`./routes/index`);
 
-app.listen(config.port, () => console.log(`Server is listneing at port bruh moment`)
-});
+// Set view engine.
+app.set(`views`, __dirname + `/views`);
+app.set(`view engine`, `ejs`);
+
+// Use routes.
+app.use(`/`, indexRouter);
+
+// Bind the webfront.
+app.listen(config.port, () => log(`green`, `Server is listening at port ${config.port}.`));
