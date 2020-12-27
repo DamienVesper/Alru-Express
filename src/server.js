@@ -7,7 +7,6 @@ const log = require(`./utils/log.js`);
 const fs = require(`fs`);
 
 // HTTP / HTTPS transport protocols.
-const https = require(`https`);
 const http = require(`http`);
 
 // Express app.
@@ -15,7 +14,6 @@ const express = require(`express`);
 const app = express();
 
 // Express middleware.
-const session = require(`express-session`);
 const compression = require(`compression`);
 const flash = require(`connect-flash`);
 
