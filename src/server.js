@@ -1,10 +1,10 @@
 const dotenv = require(`dotenv`).config();
-const config = require(`./config.js`);
+const config = require(`../config.js`);
 
 const express = require(`express`);
 const app = express();
 
-let indexRouter = require(`./routes/index`);
+let indexRouter = require(`./server/routes/index`);
 
 // Set view engine.
 app.set(`views`, __dirname + `/views`);

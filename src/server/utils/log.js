@@ -1,9 +1,5 @@
-const fs = require(`fs`);
-const dotenv = require(`dotenv`).config();
-
-// totally not stolen from br 88 c
 module.exports = (color, ...content) => {
-    // Set timing letiables.
+    // Set timing variables.
     let time = new Date();
     let second = time.getSeconds().toString().padStart(2, `0`);;
     let minute = time.getMinutes().toString().padStart(2, `0`);;
