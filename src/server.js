@@ -15,3 +15,5 @@ app.use(`/`, indexRouter);
 
 // Bind the webfront.
 app.listen(config.port, () => log(`green`, `Server is listening at port ${config.port}.`));
+
+// OK LETS GO RAJEEV TIME
