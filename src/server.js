@@ -56,7 +56,7 @@ app.use(`/api`, apiRouter);
 let server = http.createServer(app).listen(config.mode == `dev` ? 8080 : 9722);
 
 // Bind the webfront.
-app.listen(config.port, () => log(`green`, `Server is listening at port ${config.port}.`));
+server.listen(config.port, () => log(`green`, `Server is listening at port ${config.port}.`));
 
 module.exports = {
     server,
