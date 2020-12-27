@@ -25,4 +25,13 @@ module.exports = (grunt => {
             }
         }
     });
+
+
+    // Run in dev.
+    grunt.registerTask(`dev`, [`concurrent:dev`]);
+
+    // Load required npm tasks.
+    grunt.loadNpmTasks(`grunt-contrib-watch`);
+    grunt.loadNpmTasks(`grunt-nodemon`);
+    grunt.loadNpmTasks(`grunt-concurrent`);
 });

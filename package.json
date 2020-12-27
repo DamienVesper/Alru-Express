@@ -31,7 +31,6 @@
     "express": "^4.17.1",
     "grunt": "^1.3.0",
     "grunt-concurrent": "^3.0.0",
-    "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-nodemon": "^0.4.2",
     "grunt-webpack": "^4.0.2",
