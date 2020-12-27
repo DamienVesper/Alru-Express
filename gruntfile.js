@@ -18,6 +18,10 @@ module.exports = (grunt => {
         nodemon: {
             dev: {
                 script: `src/server/server.js`
+            },
+            options: {
+                args: [`dev`],
+                nodeArgs: [`--inspect`]
             }
         }
     });
