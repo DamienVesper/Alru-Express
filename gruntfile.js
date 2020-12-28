@@ -14,7 +14,7 @@ module.exports = (grunt => {
                 `watch:scripts`
             ],
             options: {
-                logConcurrentOutput: false
+                logConcurrentOutput: true
             }
         },
         nodemon: {
@@ -24,6 +24,13 @@ module.exports = (grunt => {
             options: {
                 args: [`dev`],
                 nodeArgs: [`--inspect`]
+            }
+        },
+        watch: {
+            files: [`**/*.js`, `!**/node_modules/**`, `**/*.css`, `**/*.ejs`],
+            tasks: [`build-dev`],
+            options: {
+                spawn: false
             }
         }
     });
