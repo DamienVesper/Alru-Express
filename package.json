@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "prod": "cross-env NODE_ENV=\"prod\" node src/server/server.js",
-    "dev": "cross-env NODE_ENV=\"prod\" grunt dev"
+    "dev": "cross-env NODE_ENV=\"dev\" grunt dev"
   },
   "repository": {
     "type": "git",
