@@ -6,7 +6,7 @@ const config = {
     mode: process.env.NODE_ENV,
     domain: `alru.ga`,
     logging: true,
-    staticDir = `${__dirname}/../../client/`
+    staticDir: `${__dirname}/../../client/`
 }
 
 module.exports = config;

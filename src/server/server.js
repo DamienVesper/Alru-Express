@@ -4,7 +4,6 @@ const dotenv = require(`dotenv`).config();
 
 // Utilities.
 const log = require(`./utils/log.js`);
-const fs = require(`fs`);
 
 // HTTP / HTTPS transport protocols.
 const http = require(`http`);
@@ -14,6 +13,7 @@ const express = require(`express`);
 const app = express();
 
 // Express middleware.
+const bodyParser = require(`body-parser`);
 const compression = require(`compression`);
 const flash = require(`connect-flash`);
 
@@ -53,10 +53,10 @@ app.use(`/`, indexRouter);
 app.use(`/api`, apiRouter);
 
 // Create webfront.
-let server = http.createServer(app).listen(config.mode == `dev` ? 8080 : 9722);
+let server = http.createServer(app);
 
 // Bind the webfront.
-server.listen(config.port, () => log(`green`, `Server is listening at port ${config.port}.`));
+server.listen(config.mode == `dev` ? 8080 : 9722, () => log(`green`, `Server is listening at port ${config.port}.`));
 
 module.exports = {
     server,
