@@ -17,8 +17,8 @@ const app = express();
 const compression = require(`compression`);
 const flash = require(`connect-flash`);
 
-let indexRouter = require(`./server/routes/index.js`);
-let apiRouter = require(`./server/routes/api.js`);
+let indexRouter = require(`./routes/index.js`);
+let apiRouter = require(`./routes/api.js`);
 
 // Set headers.
 app.use((req, res, next) => {
