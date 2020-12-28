@@ -7,16 +7,7 @@ module.exports = (grunt => {
             prod: webpackConfig
         },
 
-        // Development Environment
-        concurrent: {
-            dev: [
-                `nodemon:dev`,
-                `watch:scripts`
-            ],
-            options: {
-                logConcurrentOutput: true
-            }
-        },
+        // Development environment
         nodemon: {
             dev: {
                 script: `src/server/server.js`
@@ -25,21 +16,11 @@ module.exports = (grunt => {
                 args: [`dev`],
                 nodeArgs: [`--inspect`]
             }
-        },
-        watch: {
-            scripts: {
-                files: [`**/*.js`, `!**/node_modules/**`, `**/*.css`, `**/*.ejs`],
-                tasks: [`build-dev`],
-                options: {
-                    spawn: false
-                }
-            }
         }
     });
 
-
     // Run in dev.
-    grunt.registerTask(`dev`, [`concurrent:dev`]);
+    grunt.registerTask(`dev`, [`nodemon:dev`]);
 
     // Load required npm tasks.
     grunt.loadNpmTasks(`grunt-contrib-watch`);
