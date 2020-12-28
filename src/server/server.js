@@ -18,6 +18,7 @@ const compression = require(`compression`);
 const flash = require(`connect-flash`);
 
 let indexRouter = require(`./routes/index.js`);
+let redirectRouter = require(`./routes/redirect.js`);
 let apiRouter = require(`./routes/api.js`);
 
 // Set headers.
@@ -50,6 +51,7 @@ app.use(`/assets`, express.static(config.staticDir));
 
 // Use routes.
 app.use(`/`, indexRouter);
+app.use(`/`, redirectRouter);
 app.use(`/api`, apiRouter);
 
 // Create webfront.
