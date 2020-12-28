@@ -27,10 +27,12 @@ module.exports = (grunt => {
             }
         },
         watch: {
-            files: [`**/*.js`, `!**/node_modules/**`, `**/*.css`, `**/*.ejs`],
-            tasks: [`build-dev`],
-            options: {
-                spawn: false
+            scripts: {
+                files: [`**/*.js`, `!**/node_modules/**`, `**/*.css`, `**/*.ejs`],
+                tasks: [`build-dev`],
+                options: {
+                    spawn: false
+                }
             }
         }
     });
