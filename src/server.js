@@ -46,7 +46,7 @@ app.set(`views`, `${__dirname}/views`);
 app.set(`view engine`, `ejs`);
 
 // Serve the static directory.
-app.use(express.static(config.staticDir));
+app.use(`/assets`, express.static(config.staticDir));
 
 // Use routes.
 app.use(`/`, indexRouter);
