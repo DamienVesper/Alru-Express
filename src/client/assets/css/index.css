@@ -10,10 +10,6 @@ body {
     /* Margin bottom by footer height */
 }
 
-main {
-    min-height: 90%;
-}
-
 .footer {
     position: absolute;
     bottom: 0;
