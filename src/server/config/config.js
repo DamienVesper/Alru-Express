@@ -2,7 +2,7 @@ const dotenv = require(`dotenv`).config();
 
 const config = {
     appname: `Alliance Reunited`,
-    port: process.env.NODE_ENV == `prod` ? 8200 : 8080,
+    port: process.env.NODE_ENV == `prod` ? 9722 : 8080,
     mode: process.env.NODE_ENV,
     domain: `alru.ga`,
     logging: true,

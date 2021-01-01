@@ -58,7 +58,7 @@ app.use(`/api`, apiRouter);
 let server = http.createServer(app);
 
 // Bind the webfront.
-server.listen(config.mode == `dev` ? 8080 : 9722, () => log(`green`, `Server is listening at port ${config.port}.`));
+server.listen(config.port, () => log(`green`, `Server is listening at port ${config.port}.`));
 
 process.on(`uncaughtException`, err => {
     log(`red`, err.stack);
