@@ -31,3 +31,9 @@ body {
     max-width: 680px;
     padding: 0 15px;
 }
+
+body {
+    background-image: url('/assets/img/thisoldhouse.jpg');
+    background-size: cover;
+    height: auto;
+}
