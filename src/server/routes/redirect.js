@@ -5,5 +5,6 @@ router.get(`/discord`, (req, res, next) => res.redirect(`https://discord.io/Alli
 router.get(`/admin`, (req, res, next) => res.redirect(`https://www.youtube.com/watch?v=xvFZjo5PgG0`));
 router.get(`/minecraft`, (req, res, next) => res.redirect(`https://map.fortressmc.cf`));
 router.get(`/iw4m`, (req, res, next) => res.redirect(`https://pw.alru.ga`));
+router.get(`/sfx`, (req, res, next) => res.redirect(`https://sfx.alru.ga`));
 
 module.exports = router;
