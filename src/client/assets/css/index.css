@@ -8,12 +8,13 @@ body,
 }
 
 body {
-    background-image: url('/assets/img/test.gif');
-    background-size: fill;
+    background-image: url('/assets/img/background.gif');
+    background-size: cover;
+    background-size: no-repeat;
     height: auto;
 }
 
 .app {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.05);
     position: fixed;
 }
