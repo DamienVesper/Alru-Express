@@ -8,12 +8,12 @@ body,
 }
 
 body {
-    background-image: url('/assets/img/thisoldhouse.jpg');
-    background-size: cover;
+    background-image: url('/assets/img/test.gif');
+    background-size: fill;
     height: auto;
 }
 
 .app {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.15);
     position: fixed;
 }
