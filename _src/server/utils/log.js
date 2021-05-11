@@ -1,13 +1,13 @@
 module.exports = (color, ...content) => {
     // Set timing variables.
-    let time = new Date();
-    let second = time.getSeconds().toString().padStart(2, `0`);;
-    let minute = time.getMinutes().toString().padStart(2, `0`);;
-    let hour = time.getHours().toString().padStart(2, `0`);;
-    let day = time.getDate().toString().padStart(2, `0`);
-    let month = (time.getMonth() + 1).toString().padStart(2, `0`);
-    let year = time.getFullYear().toString();
-    let formattedTime = `[${month}-${day}-${year} ${hour}:${minute}:${second}]`;
+    const time = new Date();
+    const second = time.getSeconds().toString().padStart(2, `0`);
+    const minute = time.getMinutes().toString().padStart(2, `0`);
+    const hour = time.getHours().toString().padStart(2, `0`);
+    const day = time.getDate().toString().padStart(2, `0`);
+    const month = (time.getMonth() + 1).toString().padStart(2, `0`);
+    const year = time.getFullYear().toString();
+    const formattedTime = `[${month}-${day}-${year} ${hour}:${minute}:${second}]`;
 
     // Get specified color.
     let logColor;
@@ -40,7 +40,7 @@ module.exports = (color, ...content) => {
 
     let logContent = ``;
     for (const arg of content) {
-        if (typeof arg == `object`) {
+        if (typeof arg === `object`) {
             logContent += JSON.stringify(arg);
         } else {
             logContent += arg.toString();
@@ -50,4 +50,4 @@ module.exports = (color, ...content) => {
     // If no color specified, throw an error.
     if (!logColor) return;
     return console.log(logColor, formattedTime, logContent);
-}
+};

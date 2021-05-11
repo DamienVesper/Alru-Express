@@ -17,9 +17,9 @@ const bodyParser = require(`body-parser`);
 const compression = require(`compression`);
 const flash = require(`connect-flash`);
 
-let indexRouter = require(`./routes/index.js`);
-let redirectRouter = require(`./routes/redirect.js`);
-let apiRouter = require(`./routes/api.js`);
+const indexRouter = require(`./routes/index.js`);
+const redirectRouter = require(`./routes/redirect.js`);
+const apiRouter = require(`./routes/api.js`);
 
 // Set headers.
 app.use((req, res, next) => {
@@ -55,7 +55,7 @@ app.use(`/`, redirectRouter);
 app.use(`/api`, apiRouter);
 
 // Create webfront.
-let server = http.createServer(app);
+const server = http.createServer(app);
 
 // Bind the webfront.
 server.listen(config.port, () => log(`green`, `Server is listening at port ${config.port}.`));
@@ -67,4 +67,4 @@ process.on(`uncaughtException`, err => {
 module.exports = {
     server,
     app
-}
+};

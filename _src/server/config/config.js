@@ -7,6 +7,6 @@ const config = {
     domain: `alru.ga`,
     logging: true,
     staticDir: `${__dirname}/../../client/assets`
-}
+};
 
 module.exports = config;
