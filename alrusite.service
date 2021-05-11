@@ -1,0 +1,15 @@
+[Unit]
+Description=Alliance Reunited Website
+After=nginx.service
+Requires=nginx.service
+PartOf=nginx.service
+
+[Service]
+User=root
+WorkingDirectory=/opt/alru.ga
+ExecStart=/
+Restart=on-failure
+StartLimitInterval=600
+
+[Install]
+WantedBy=multi-user.target
