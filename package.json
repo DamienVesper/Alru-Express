@@ -4,8 +4,9 @@
   "description": "The home website of Alliance Reunited.",
   "main": "server.js",
   "scripts": {
-    "prod": "cross-env NODE_ENV=\"prod\" pm2 start src/server/server.js",
-    "dev": "cross-env NODE_ENV=\"dev\" grunt dev",
+    "build": "tsc",
+    "prod": "node ./build/src/index.js --port 8750",
+    "dev": "node ./build/src/index.js --port 8080",
     "dev:lint": "eslint . --fix"
   },
   "repository": {
@@ -31,6 +32,7 @@
   "devDependencies": {
     "@types/express": "^4.17.11",
     "@types/node": "^15.6.1",
+    "@types/yargs": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.25.0",
     "@typescript-eslint/parser": "^4.25.0",
     "eslint": "^7.27.0",

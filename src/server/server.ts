@@ -8,8 +8,6 @@ import pageRouter from './routes/index';
 import apiRouter from './routes/api';
 
 import * as path from 'path';
-import * as dotenv from 'dotenv';
-dotenv.config();
 
 const app: Express.Application = Express();
 
