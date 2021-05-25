@@ -3,9 +3,6 @@ const webpackConfig = require(`./webpack.config.js`);
 module.exports = grunt => {
     grunt.initConfig({
         pkg: grunt.file.readJSON(`package.json`),
-        webpack: {
-            prod: webpackConfig
-        },
 
         // Development environment
         nodemon: {
