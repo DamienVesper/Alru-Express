@@ -8,7 +8,7 @@
     "prod": "node ./build/src/server/server.js --port 8750",
     "dist": "yarn build && yarn dev",
     "dev": "node ./build/src/server/server.js --port 8080",
-    "dev:lint": "eslint . --fix"
+    "dev:lint": "eslint . --fix --ext .ts"
   },
   "repository": {
     "type": "git",

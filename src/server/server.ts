@@ -4,10 +4,13 @@ import log from './utils/log';
 import * as HTTP from 'http';
 import * as Express from 'express';
 
-import pageRouter from './routes/index';
-import apiRouter from './routes/api';
+import * as EJSLayouts from 'express-ejs-layouts';
+
+// import pageRouter from './routes/index';
+// import apiRouter from './routes/api';
 
 import * as path from 'path';
+import * as fs from 'fs';
 
 const app: Express.Application = Express();
 const server: HTTP.Server = HTTP.createServer(app);
@@ -15,10 +18,20 @@ const server: HTTP.Server = HTTP.createServer(app);
 app.set(`views`, path.resolve(__dirname, `../client/views`));
 app.set(`view engine`, `ejs`);
 
+app.use(EJSLayouts);
+
 app.use(`/assets`, Express.static(path.resolve(__dirname, `../client/assets`)));
 
-app.use(`/`, pageRouter);
-app.use(`/api`, apiRouter);
+app.use(`/`, (req: Express.Request, res: Express.Response) => {
+    if (req.path === `/`) res.render(`index.ejs`);
+    else {
+        const pathToFile = req.path.slice(1);
+        const fileExists = fs.existsSync(path.resolve(__dirname, `../client/views`, `${pathToFile}.ejs`));
+
+        if (fileExists) res.render(`${pathToFile}.ejs`);
+        else res.render(`404.ejs`);
+    }
+});
 
 server.listen(config.port, () => log(`green`, `Server is listening at port ${config.port}.`));
 

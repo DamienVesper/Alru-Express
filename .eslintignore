@@ -1,0 +1,5 @@
+# TypeScript Build
+build/
+
+# Ignore old src.
+_src/
