@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "build": "grunt build && tsc",
-    "prod": "node ./build/src/server/server.js --port 8750",
+    "prod": "node ./build/src/server/server.js --port 9722",
     "dist": "yarn build && yarn dev",
     "dev": "node ./build/src/server/server.js --port 8080",
     "dev:lint": "eslint . --fix --ext .ts"
