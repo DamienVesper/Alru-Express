@@ -1,7 +1,3 @@
 declare const $;
 
-$(document).ready(() => {
-    const pathname = window.location.pathname.replace(`/`, `-`);
-    $(`#nav${pathname}`).addClass(`nav-item active`);
-    $(`#nav${pathname} > a`).addClass(`nav-link disabled`);
-});
+$(document).ready(() => $(`#nav${window.location.pathname.replace(`/`, `-`)} > a`).addClass(`disabled active`));
