@@ -4,13 +4,13 @@ import log from './utils/log';
 import * as HTTP from 'http';
 import express from 'express';
 
-import * as EJSLayouts from 'express-ejs-layouts';
-
 // import pageRouter from './routes/index';
 // import apiRouter from './routes/api';
 
 import * as path from 'path';
 import * as fs from 'fs';
+
+const EJSLayouts = require(`express-ejs-layouts`);
 
 const app: express.Application = express();
 const server: HTTP.Server = HTTP.createServer(app);
