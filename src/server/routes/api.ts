@@ -1,5 +1,5 @@
-import * as express from 'express';
+import * as Express from 'express';
 
-const apiRouter: express.Router = express.Router();
+const apiRouter: Express.Router = Express.Router();
 
 export default apiRouter;

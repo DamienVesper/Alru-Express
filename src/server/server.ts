@@ -22,17 +22,6 @@ app.use(EJSLayouts);
 
 app.use(`/assets`, express.static(path.resolve(__dirname, `../client/assets`)));
 
-app.use(`/`, (req: express.Request, res: express.Response) => {
-    if (req.path === `/`) res.render(`index.ejs`);
-    else {
-        const pathToFile = req.path.slice(1);
-        const fileExists = fs.existsSync(path.resolve(__dirname, `../client/views`, `${pathToFile}.ejs`));
-
-        if (fileExists) res.render(`${pathToFile}.ejs`);
-        else res.render(`404.ejs`);
-    }
-});
-
 server.listen(config.port, () => log(`green`, `Server is listening at port ${config.port}.`));
 
 export default {
