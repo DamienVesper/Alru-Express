@@ -11,7 +11,7 @@ module.exports = (grunt) => {
                         expand: true,
                         nonull: true,
                         cwd: `src/client`,
-                        src: [`**`],
+                        src: [`**`, `!*.ts`],
                         dest: `build/src/client`,
                         filter: `isFile`
                     }
