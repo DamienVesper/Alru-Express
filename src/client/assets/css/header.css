@@ -6,3 +6,7 @@ nav input.form-control.me-2 {
     background: rgba(0, 0, 0, 0.25);
     border: none;
 }
+
+nav form {
+    margin-right: 0.5rem;
+}
