@@ -15,7 +15,8 @@ html, body {
 body {
     background: url('/assets/img/background.jpg');
     background-size: cover;
-    background-size: no-repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     height: auto;
 }
 
