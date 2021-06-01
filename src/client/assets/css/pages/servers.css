@@ -4,8 +4,14 @@ table {
 
     margin: auto;
     table-layout: fixed;
+
+    width: 90% !important;
 }
 
 table * {
     border-bottom: none;
+}
+
+table a {
+    text-decoration: none;
 }
