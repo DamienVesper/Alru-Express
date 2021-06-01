@@ -4,7 +4,7 @@
 
 .card-array {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .card {
@@ -41,3 +41,8 @@
 .helper {
     background-color: #24c9f2 !important;
 }
+
+h2 {
+    font-size: 1.5rem !important;
+}
+ 
