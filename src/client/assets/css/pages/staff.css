@@ -1,0 +1,19 @@
+.card-array {
+    width: 100%;
+}
+
+/* .card-array > * {
+    display: flex;
+    justify-content: space-around;
+} */
+
+.card-avatar {
+    width: 5rem;
+    height: 5rem;
+}   
+
+.card-name {
+    position: absolute;
+
+    bottom: 0px;
+}
