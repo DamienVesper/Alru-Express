@@ -7,13 +7,21 @@
     justify-content: space-around;
 } */
 
+.card {
+    width: 25rem;
+}
+
 .card-avatar {
     width: 5rem;
     height: 5rem;
-}   
+}
 
 .card-name {
     position: absolute;
-
     bottom: 0px;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100%;
 }
