@@ -8,20 +8,42 @@
 } */
 
 .card {
-    width: 25rem;
+    max-width: fit-content;
+    background: none;
+    font-size: small;
 }
 
 .card-avatar {
-    width: 5rem;
-    height: 5rem;
+    width: 7rem;
+    height: 7rem;
+}
+
+.user-pfp {
+    display: block;
 }
 
 .card-name {
     position: absolute;
-    bottom: 0px;
-
-    left: 50%;
-    transform: translateX(-50%);
-
+    bottom: -0.75rem;
     width: 100%;
+}
+
+.head-admin {
+    background-color: #1e90ff !important;
+}
+
+.admin {
+    background-color: #f82055 !important;
+}
+
+.sr-mod {
+    background-color: #db29ff !important;
+}
+
+.mod {
+    background-color: #8e30fc !important;
+}
+
+.helper {
+    background-color: #24c9f2 !important;
 }
